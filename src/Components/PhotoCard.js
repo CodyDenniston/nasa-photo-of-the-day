@@ -16,12 +16,10 @@ export default function DailyPhoto(){
             console.log("THIS IS AN ERROR >:O", error);
         });
     }, []);
-   
- return <div className="container">
-            {photo.map(pic => {
-                return <Image description={pic.explanation} image={pic.url}/>
-            })}
+        return (
+        <div className="container">
+             <Image description={photo.explanation} image={photo.url}/>
         </div>
-    
+ )
     
 }
