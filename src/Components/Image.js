@@ -1,11 +1,20 @@
 import React from 'react';
+import {
+    Card, CardImg, CardText, CardBody,
+    CardTitle, CardSubtitle, Button
+  } from 'reactstrap';
 
 const Image = props => {
     return (
-        <div className="daily-img" key={props.id}>
-            <img className="nasa-img" alt="NASA Image" src={props.image} />
-            <p>{props.description}</p>
-        </div>
+        <Card className="daily-img" key={props.id}>
+            <CardImg top width="100%" className="nasa-img" alt="NASA Image" src={props.image} />
+            <CardBody>
+                <CardTitle>{props.title}</CardTitle>
+                <CardSubtitle>{props.date}</CardSubtitle>
+                <CardText>{props.description}</CardText>
+            </CardBody>
+            
+        </Card>
     )
 }
 

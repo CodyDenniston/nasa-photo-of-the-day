@@ -13,12 +13,12 @@ export default function DailyPhoto(){
             setPhoto(response.data)
         })
         .catch(error => {
-            console.log("THIS IS AN ERROR >:O", error);
+            console.log("THIS IS AN ERROR", error);
         });
     }, []);
         return (
         <div className="container">
-             <Image description={photo.explanation} image={photo.url}/>
+             <Image description={photo.explanation} image={photo.url} date={photo.date} title={photo.title}/>
         </div>
  )
     
